@@ -27,6 +27,8 @@
 
     * {
       box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     body {
@@ -250,6 +252,10 @@
       color: var(--nks-charcoal);
     }
 
+    .signature-card p {
+      font-size: 0.95rem;
+    }
+
     .signature-line {
       border-bottom: 1px solid var(--nks-charcoal);
       height: 2.4rem;
@@ -312,6 +318,22 @@
 
       .section-title {
         break-after: avoid;
+      }
+
+      .signature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .signature-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        padding: 1rem;
+      }
+
+      .signature-card p {
+        font-size: 0.82rem;
       }
 
       footer {
